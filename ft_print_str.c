@@ -6,7 +6,7 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:42:17 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 21:11:29 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:12:45 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_str(char *str)
 {
-	int len;
+	int	len;
 
 	if (!str)
 	{
@@ -25,5 +25,5 @@ int	ft_print_str(char *str)
 	while (str[len])
 		len++;
 	write(1, str, len);
-	return(len);
+	return (len);
 }

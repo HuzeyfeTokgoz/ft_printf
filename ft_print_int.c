@@ -6,16 +6,16 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 18:42:48 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 21:06:09 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:11:37 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_int(int n)
+int	ft_print_int(int n)
 {
-	int	i;
-	long nb;
+	int		i;
+	long	nb;
 
 	nb = n;
 	i = 0;

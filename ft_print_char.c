@@ -6,7 +6,7 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:10:49 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 21:12:11 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:10:12 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 int	ft_print_char(char c)
 {
-	if (!c)
-	{
-		write (1, "(null)", 6);
-		return (6);
-	}
 	write(1, &c, 1);
 	return (1);
 }

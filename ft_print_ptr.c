@@ -6,16 +6,16 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 19:23:48 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 21:06:28 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:12:18 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int ft_put_hex(unsigned long addr)
+static int	ft_put_hex(unsigned long addr)
 {
-	int	len;
-	char *hex_digits;
+	int		len;
+	char	*hex_digits;
 
 	hex_digits = "0123456789abcdef";
 	len = 0;
@@ -25,9 +25,9 @@ static int ft_put_hex(unsigned long addr)
 	return (len);
 }
 
-int ft_print_ptr(void *ptr)
+int	ft_print_ptr(void *ptr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (!ptr)
