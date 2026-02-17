@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:49 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 22:20:06 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/18 01:55:20 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	ft_print_str(char *s);
 int	ft_print_int(int n);
 int	ft_print_unsigned(unsigned int nb);
 int	ft_print_ptr(void *ptr);
-int	ft_print_hex(unsigned int nb, char format);
+int	ft_print_hex(unsigned long nb, char format);
 
 #endif
