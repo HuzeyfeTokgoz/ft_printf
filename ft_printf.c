@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:53 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 22:40:46 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/17 16:47:46 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static int	print_format(char c, va_list args)
 		len += ft_print_hex(va_arg(args, unsigned int), c);
 	else if (c == '%')
 		len += ft_print_char('%');
+	else if (c != '\0')
+		len += ft_print_char('%') + ft_print_char(c);
 	return (len);
 }
 
