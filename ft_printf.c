@@ -6,7 +6,7 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:53 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/17 16:47:46 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/20 22:45:52 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,11 @@ static int	print_format(char c, va_list args)
 	return (len);
 }
 
-int	ft_printf(const char *str, ...)
+int	ft_print_form(const char *str, va_list args, int check, int len)
 {
-	int		i;
-	int		len;
-	va_list	args;
+	int	i;
 
-	if (!str)
-		return (-1);
-	va_start(args, str);
 	i = 0;
-	len = 0;
 	while (str[i])
 	{
 		if (str[i] == '%')
@@ -55,12 +49,35 @@ int	ft_printf(const char *str, ...)
 			i++;
 			if (str[i] == '\0')
 				break ;
-			len += print_format(str[i], args);
+			check = print_format(str[i], args);
+			if (check == -1)
+				return (-1);
+			len += check;
 		}
 		else
-			len += ft_print_char(str[i]);
+		{
+			check = ft_print_char(str[i]);
+			if (check == -1)
+				return (-1);
+			len += check;
+		}
 		i++;
 	}
+	return (len);
+}
+
+int	ft_printf(const char *str, ...)
+{
+	int		len;
+	int		check;
+	va_list	args;
+
+	len = 0;
+	check = 0;
+	if (!str)
+		return (-1);
+	va_start(args, str);
+	len = ft_print_form(str, args, check, len);
 	va_end(args);
 	return (len);
 }

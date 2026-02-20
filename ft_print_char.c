@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:10:49 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/07 22:10:12 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:49:17 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_print_char(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	int a;
+
+	a =	write(1, &c, 1);
+	return (a);
 }
