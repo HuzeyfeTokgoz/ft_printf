@@ -6,7 +6,7 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:53 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/20 22:45:52 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/21 21:44:39 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_print_form(const char *str, va_list args, int check, int len)
 		{
 			i++;
 			if (str[i] == '\0')
-				break ;
+				return (-1);
 			check = print_format(str[i], args);
 			if (check == -1)
 				return (-1);
