@@ -19,6 +19,6 @@ int	ft_print_str(char *s);
 int	ft_print_int(int n);
 int	ft_print_unsigned(unsigned int nb);
 int	ft_print_ptr(void *ptr);
-int	ft_print_hex(unsigned long nb, char format);
+int	ft_print_hex(unsigned long nb, const char format);
 
 #endif

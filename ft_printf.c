@@ -37,7 +37,7 @@ static int	print_format(char c, va_list args)
 	return (len);
 }
 
-int	ft_print_form(const char *str, va_list args, int check, int len)
+static int	ft_print_form(const char *str, va_list args, int check, int len)
 {
 	int	i;
 
